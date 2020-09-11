@@ -5,7 +5,7 @@ function AddContainer({ showAddContainer, setShowAddContainer, setCards }) {
   const [answer, setAnswer] = useState('');
 
   const addCard = () => {
-    if (question && answer) {
+    if (question.trim() && answer.trim()) {
       const newCard = { question, answer };
 
       setCards((c) => [...c, newCard]);
@@ -30,7 +30,7 @@ function AddContainer({ showAddContainer, setShowAddContainer, setCards }) {
         <label htmlFor="question">Question</label>
         <textarea
           value={question}
-          onChange={(e) => setQuestion(e.target.value.trim())}
+          onChange={(e) => setQuestion(e.target.value)}
           placeholder="Enter question..."
         ></textarea>
       </div>
@@ -39,7 +39,7 @@ function AddContainer({ showAddContainer, setShowAddContainer, setCards }) {
         <label htmlFor="answer">Answer</label>
         <textarea
           value={answer}
-          onChange={(e) => setAnswer(e.target.value.trim())}
+          onChange={(e) => setAnswer(e.target.value)}
           placeholder="Enter Answer..."
         ></textarea>
       </div>
