@@ -1,5 +1,7 @@
 ## Memory Cards
 
+<p> for live [demo](https://techkanna.github.io/vtr-memory-cards/) </p>
+
 Flash card app for learning. Display, add and remove memory cards with questions and answers
 
 ## Project Specifications
